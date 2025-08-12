@@ -9,45 +9,74 @@ export const HomePage = () => {
     }
 
     return (
-        <div
-            className="min-h-screen bg-gradient-to-br from-indigo-500 to-purple-600 flex items-center justify-center p-8">
-            <div className="bg-white rounded-3xl p-12 max-w-md w-full shadow-2xl text-center">
-                <h1 className="text-4xl font-bold bg-gradient-to-br from-indigo-500 to-purple-600 bg-clip-text text-transparent mb-8 leading-tight">
+        <div className="min-h-screen flex items-center justify-center"
+             style={{background: 'linear-gradient(to bottom right, #0f172a, #581c87, #0f172a)', padding: '2rem'}}>
+            <div className="w-full text-center border" style={{
+                background: 'rgba(255, 255, 255, 0.1)',
+                backdropFilter: 'blur(16px)',
+                borderRadius: '1.5rem',
+                padding: '3rem',
+                maxWidth: '28rem',
+                boxShadow: '0 25px 50px -12px rgba(0, 0, 0, 0.25)',
+                borderColor: 'rgba(255, 255, 255, 0.2)'
+            }}>
+                <h1 style={{
+                    fontSize: '2.25rem',
+                    fontWeight: 'bold',
+                    color: 'white',
+                    marginBottom: '2rem',
+                    lineHeight: '1.2'
+                }}>
                     Infrastructure Training
                 </h1>
 
-                <div className="mb-8">
+                <div style={{marginBottom: '2rem'}}>
                     <Button
                         onClick={handlePing}
                         disabled={isLoading}
-                        className={`min-w-[180px] text-lg font-semibold py-4 px-8 rounded-xl text-white border-none transition-all duration-300 ease-in-out hover:-translate-y-0.5 disabled:cursor-not-allowed disabled:hover:transform-none ${
-                            isLoading
-                                ? 'bg-gradient-to-br from-gray-400 to-gray-500 shadow-none'
-                                : 'bg-gradient-to-br from-indigo-500 to-purple-600 shadow-indigo-400/40 shadow-md hover:shadow-indigo-400/60 hover:shadow-lg'
-                        }`}
+                        variant="gradient"
+                        size="lg"
+                        className="min-w-[180px]"
+                        style={{fontSize: '1.125rem', fontWeight: '600', borderRadius: '0.75rem'}}
                     >
                         {isLoading ? 'Проверяем...' : 'Проверить API'}
                     </Button>
                 </div>
 
                 {error && (
-                    <div className="bg-red-50 border border-red-200 rounded-xl p-4 text-red-700 mt-4">
-                        <p className="font-semibold mb-2">
+                    <div className="border" style={{
+                        background: 'rgba(239, 68, 68, 0.2)',
+                        borderColor: 'rgba(248, 113, 113, 0.3)',
+                        borderRadius: '0.75rem',
+                        padding: '1rem',
+                        color: '#fecaca',
+                        marginTop: '1rem',
+                        backdropFilter: 'blur(4px)'
+                    }}>
+                        <p style={{fontWeight: '600', marginBottom: '0.5rem'}}>
                             Ошибка подключения к API
                         </p>
-                        <p className="text-sm opacity-80">
+                        <p style={{fontSize: '0.875rem', opacity: '0.8'}}>
                             {error.message}
                         </p>
                     </div>
                 )}
 
                 {pingData && (
-                    <div className="bg-green-50 border border-green-200 rounded-xl p-4 text-green-800 mt-4">
-                        <p className="font-semibold mb-2">
+                    <div className="border" style={{
+                        background: 'rgba(34, 197, 94, 0.2)',
+                        borderColor: 'rgba(74, 222, 128, 0.3)',
+                        borderRadius: '0.75rem',
+                        padding: '1rem',
+                        color: '#bbf7d0',
+                        marginTop: '1rem',
+                        backdropFilter: 'blur(4px)'
+                    }}>
+                        <p style={{fontWeight: '600', marginBottom: '0.5rem'}}>
                             ✅ API успешно подключен
                         </p>
-                        <div className="text-sm opacity-80 space-y-1">
-                            <p>
+                        <div style={{fontSize: '0.875rem', opacity: '0.8'}}>
+                            <p style={{marginBottom: '0.25rem'}}>
                                 <strong>Статус:</strong> {pingData.data.status}
                             </p>
                             <p>
