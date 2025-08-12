@@ -12,10 +12,12 @@ dist
 dist-ssr
 *.local
 .env
+.pnp.loader.mjs
+.pnp.cjs
 
 # Editor directories and files
 .vscode/*
-!.vscode/extensions.json
+.vscode/extensions.json
 .idea
 .DS_Store
 *.suo
@@ -28,9 +30,10 @@ dist-ssr
 .claude
 
 # Yarn
+.yarn
 .yarn/*
-!.yarn/patches
-!.yarn/plugins
-!.yarn/releases
-!.yarn/sdks
-!.yarn/versions
+.yarn/patches
+.yarn/plugins
+.yarn/releases
+.yarn/sdks
+.yarn/versions!/.yarn/
