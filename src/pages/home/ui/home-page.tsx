@@ -75,14 +75,10 @@ export const HomePage = () => {
                         <p style={{fontWeight: '600', marginBottom: '0.5rem'}}>
                             ✅ API успешно подключен
                         </p>
-                        <div style={{fontSize: '0.875rem', opacity: '0.8'}}>
-                            <p style={{marginBottom: '0.25rem'}}>
-                                <strong>Статус:</strong> {pingData.data.status}
-                            </p>
-                            <p>
-                                <strong>Время:</strong> {new Date(pingData.data.timestamp).toLocaleString('ru-RU')}
-                            </p>
-                        </div>
+                        <p style={{fontSize: '0.875rem', opacity: '0.8'}}>
+                            <strong>Ответ
+                                сервера:</strong> {pingData?.message || pingData?.data?.message || JSON.stringify(pingData)}
+                        </p>
                     </div>
                 )}
             </div>

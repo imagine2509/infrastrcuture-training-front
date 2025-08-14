@@ -5,6 +5,5 @@ export interface ApiResponse<T = unknown> {
 }
 
 export interface PingResponse {
-    status: string
-    timestamp: string
+    message: string
 }

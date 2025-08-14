@@ -1,0 +1,13 @@
+# Yarn PnP generated files
+.pnp.cjs
+.pnp.loader.mjs
+
+# Build output
+dist/
+build/
+
+# Dependencies
+node_modules/
+
+# Generated files
+*.d.ts

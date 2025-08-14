@@ -12,8 +12,8 @@ dist
 dist-ssr
 *.local
 .env
-.pnp.loader.mjs
-.pnp.cjs
+# .pnp.loader.mjs - removed, needed for Docker
+# .pnp.cjs - removed, needed for Docker
 tsconfig.node.tsbuildinfo
 tsconfig.tsbuildinfo
 
