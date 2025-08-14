@@ -1,0 +1,3 @@
+# Yarn PnP generated files - mark as binary to avoid diff/merge issues
+.pnp.cjs -diff -merge linguist-generated
+.pnp.loader.mjs -diff -merge linguist-generated
